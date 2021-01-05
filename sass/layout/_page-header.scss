@@ -7,12 +7,12 @@
   /*---------- NAVIGATION ----------*/
   
   .main-nav {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
   }
   
   .site-nav {
-    display: flex;
+    // display: flex;
     margin-left: 92px;
 
     &__item + &__item {
@@ -73,8 +73,8 @@
   /*---------- CONTACTS ----------*/
   
   .contacts {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     margin-left: auto;
 
     &__item + &__item {

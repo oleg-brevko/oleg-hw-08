@@ -50,9 +50,6 @@ img {
 }
 
 .container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -76,7 +73,6 @@ img {
 
 /*---------MAIN-BUTTON----------*/
 .main-button {
-  display: inline-block;
   text-align: center;
   cursor: pointer;
   margin: 0 auto;
@@ -375,13 +371,7 @@ img {
 }
 
 /*---------- NAVIGATION ----------*/
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
 .site-nav {
-  display: flex;
   margin-left: 92px;
 }
 
@@ -441,8 +431,6 @@ img {
 
 /*---------- CONTACTS ----------*/
 .contacts {
-  display: flex;
-  align-items: center;
   margin-left: auto;
 }
 
@@ -481,13 +469,7 @@ img {
 
 /*============ HERO ==============*/
 .hero {
-  display: flex;
-  flex-wrap: wrap;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 200px;
-  padding-top: 200px;
   background-color: #2f303a;
 }
 
@@ -504,8 +486,6 @@ img {
 
 /*---------- OVERLAY ----------*/
 .overlay {
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid #212121;
@@ -516,7 +496,6 @@ img {
 
 /*============ SECTION-FEATUTES ==============*/
 .feature__list {
-  display: flex;
   margin-left: auto;
   margin-right: auto;
 }
@@ -556,7 +535,6 @@ img {
 }
 
 .occupation__list {
-  display: flex;
   justify-content: center;
 }
 
@@ -591,11 +569,6 @@ img {
 /*============ SECTION-TEAM ==============*/
 .team {
   background-color: #f5f4fa;
-}
-
-.team__list {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .team__item {
@@ -635,7 +608,6 @@ img {
 
 /*============ SECTION-CLIENTS ==============*/
 .clients-list {
-  display: flex;
   align-items: center;
 }
 
@@ -676,7 +648,6 @@ img {
 }
 
 .footer-container {
-  display: flex;
   align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -751,13 +722,7 @@ img {
 
 /*---------FOOTER-FORM----------*/
 .footer-form {
-  width: 570px;
-  height: 86px;
   margin-left: auto;
-}
-
-.footer-form__position {
-  display: flex;
 }
 
 .footer-form__input {
