@@ -1,0 +1,21 @@
+/*----------LOGO----------*/
+
+.logo {
+    display: block;
+    margin-bottom: 20px;
+    color: $title-and-text-color;
+    font-family: $logo-font;
+    @include font (26px, 700, 31px);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    &--accent {
+      color: $button-color;
+    }
+  }
+
+  // font-weight: 700;
+    // font-size: 26px;
+    // line-height: 1.192;
+  
+  

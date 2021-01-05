@@ -1,0 +1,187 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* z-index: 100; */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 250ms linear;
+  
+  &.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  
+}
+}
+
+/*---------MODAL----------*/
+
+.modal {
+  position: absolute;
+  padding: 40px;
+  width: 528px;
+  min-height: 581px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms linear 250ms;
+  
+  .backdrop.is-hidden & {
+  transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.close__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $primary-white-color;
+  cursor: pointer;
+  transition: fill 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $button-color;
+  }
+}
+
+.close__icon {
+  fill: $title-and-text-color;
+
+  .close__button:hover &,
+.close__button:focus & {
+  fill: $button-color;
+outline-color: $button-color;
+  } 
+}
+
+/*---------FORM----------*/
+  
+  .form {
+    display: flex; 
+    flex-direction: column;
+    /* align-items: center; */
+
+    &__title {
+      margin-bottom: 12px;
+      padding: 0;
+      font-family: $main-font;
+      @include font (20px, 700, 23px);
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $title-and-text-color;
+    }
+
+    &__label {
+      font-family: $main-font;
+      font-style: normal;
+      @include font (12px, 400, 14px);
+      letter-spacing: 0.01em;
+      color: $primary-text-color;
+    }
+
+    &__input {
+      width: 100%;
+      height: 40px;
+      padding-left: 42px;
+      transition: border-color 250ms $timing-function;
+    
+     &--wrapper {
+      position: relative;
+      display: block;
+      margin-top: 4px;
+       }
+    }
+  }
+  
+  .form-field {
+    position: relative;
+  
+  &__item::not(:last-child) {
+      margin-bottom: 10px;
+      }
+      
+  &__item:last-of-type {
+      margin-bottom: 20px;}      
+  }
+  
+.form__comment {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    margin-top: 4px;
+    resize: none;
+    transition: border-color 250ms $timing-function;
+    
+    &::placeholder {
+    font-family: $main-font;
+    @include font (12px, 400, 14px);
+    color: rgba(117, 117, 117, 0.5);
+      }
+    }
+  
+  .form__input,
+  .form__comment {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    
+  &:hover,
+  &:focus {
+    outline-style: none;
+    border-color: $button-color;
+  }
+}
+
+  .form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    display: block;
+    transition: fill 250ms $timing-function;
+    
+     .form__input:hover + &,
+     .form__input:focus + & {
+    fill: $button-color;
+    transition: all 250ms $timing-function;
+  }
+  }
+  
+  .form-policy__text {
+    margin-bottom: 30px;
+  
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 10px;
+    border: 1px solid $title-and-text-color;
+    
+     .form-policy:checked + & {
+    background-color: $button-color;
+    border-color: transparent;
+    background-image: url(../images/icon-check.svg);
+  }
+  }
+  }
+  
+  .form-policy__link {
+    color: $button-color;
+
+  &:hover,
+  &:focus {
+  color: $title-and-text-color;  
+  }
+  }

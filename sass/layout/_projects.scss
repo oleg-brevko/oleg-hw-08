@@ -1,0 +1,18 @@
+/*---------- PROJECTS ----------*/
+
+.projects__title {
+  margin-top: 0;
+    color: $title-and-text-color;
+    @include font (18px, 700, 36px);
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+  
+  .projects__description {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $primary-text-color;
+    @include font (16px, 400, 30px);
+    letter-spacing: 0.03em;
+  }
+  

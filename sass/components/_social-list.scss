@@ -1,0 +1,34 @@
+/*---------- SOCIAL-LIST ----------*/
+
+.social-list {
+    display: flex;
+    justify-content: space-around;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      color: #afb1b8;
+      background-color: $primary-white-color;
+      transition: background-color 250ms linear;
+  
+      &:hover,
+      &:focus {
+        background-color: $button-color;
+        color: $primary-white-color;
+      }
+    }
+
+    &__icon {
+      fill: currentColor;
+    }
+  }
+  
+  
+  
+ 
+  
+  
