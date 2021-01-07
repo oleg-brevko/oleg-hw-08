@@ -1,9 +1,9 @@
 /*---------- CARDS ----------*/
 
 .card__list {
-    display: flex;
-    flex-wrap: wrap;
-    /* background-color: teal; */
+    // display: flex;
+    // flex-wrap: wrap;
+   background-color: teal;
   }
   
   .card__link {
@@ -12,7 +12,9 @@
   }
   
   .card__element {
-    width: calc((100% - 60px) / 3);
+    display: flex;
+    // justify-content: center;
+    // width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
 
