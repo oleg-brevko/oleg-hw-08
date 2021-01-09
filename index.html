@@ -21,13 +21,28 @@
     <header class="page-header">
       <div class="container main-nav">
         <a href="#" class="logo" aria-label="logo" lang="en">
-          <span class="logo--accent">Web</span>Studio</a
-        >
+          <span class="logo--accent">Web</span>Studio</a>
 
         <!--Menu nav-->
 
         <nav class="nav">
-          <ul class="site-nav list">
+
+          <button type="button"
+           class="menu-button is-open"
+           aria-expanded="false"
+           >
+            <svg   
+            width="20"
+            height="20"
+            aria-label="Menu button switch"
+            aria-controls="site-nav-id"
+            >
+              <use href="./images/sprite.svg#icon-close" class="icon-cross"></use>
+              <use href="./images/sprite.svg#icon-menu" class="icon-menu"></use>
+            </svg>
+          </button>
+
+          <ul class="site-nav list" id="site-nav-id">
             <li class="site-nav__item">
               <a href="index.html" class="site-nav__link is-current">Студия</a>
             </li>
@@ -40,11 +55,10 @@
               <a href="" class="site-nav__link">Контакты</a>
             </li>
           </ul>
-        </nav>
 
         <!--Contacts-->
 
-        <ul class="contacts list">
+        <ul class="contacts list visually-hidden">
           <li class="contacts__item">
             <a href="milto:info@devstudio.com" class="contacts__link"
               >info@devstudio.com
@@ -62,6 +76,7 @@
             </a>
           </li>
         </ul>
+      </nav>
       </div>
     </header>
 

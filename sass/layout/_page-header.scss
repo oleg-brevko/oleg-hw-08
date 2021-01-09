@@ -6,24 +6,59 @@
 
   /*---------- NAVIGATION ----------*/
   
+  /*-----NEW-HEADER-----*/
   .main-nav {
-    // display: flex;
-    // align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
   }
-  
-  .site-nav {
-    // display: flex;
-    margin-left: 92px;
 
-    &__item + &__item {
-      margin-left: 50px;
+  .menu-button {
+    display: inline-flex;
+    margin: 0;
+    page-break-after: 0;
+    border: none;
+    background-color: transparent;
+
+    .icon-cross {
+      display: none;
     }
 
-    &__link {
-      position: relative;
+    &.is-open .icon-cross {
       display: block;
-      padding-top: 32px;
-      padding-bottom: 32px;
+    }
+
+    &.is-open .icon-menu {
+      display: none;
+    }
+  }
+
+   .site-nav {
+     position: absolute;
+     width: 100%;
+     height: 393px;
+     top: 100%;
+     left: 0;
+    //  padding-top: 60px;
+    text-align: center;
+    background-color: white;
+
+    &__item {
+      margin-bottom: 52px;
+
+      &:last-child {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+    .site-nav__link {
+      // position: relative;
+      display: block;
+      // padding-top: 32px;
+      // padding-bottom: 32px;
       color: $title-and-text-color;
       @include font (14px, 500, 17px);
       letter-spacing: 0.02em;
@@ -36,7 +71,7 @@
     cursor: pointer;
      }
 
-  &::after {
+     &::after {
       content: '';
       display: block;
       position: absolute;
@@ -49,66 +84,136 @@
       opacity: 0;
       transform: scaleX(0);
       transition: all 250ms $timing-function;
+     }
     }
+  
+  .site-nav.list {
+    background-color: #fff;
+  }
 
   &:hover::after,
   &:focus::after {
     opacity: 1;
     transform: scaleX(1);
       }
-    }
-  }
 
-  .is-current {
-    color: $button-color;
-    opacity: 1;
+  // .is-current {
+  //   color: $button-color;
+  //   opacity: 1;
 
-    &::after {
-      color: $button-color;
-      opacity: 1;
-      transform: scaleX(1);
-    }
-  }
+  //   &::after {
+  //     color: $button-color;
+  //     opacity: 1;
+  //     transform: scaleX(1);
+  //   }
+  // }
+
+
+ /*-----OLD-HEADER-----*/
+
+//  .main-nav {
+//   display: flex;
+//   align-items: center;
+// }
+  
+  // .site-nav {
+  //   display: flex;
+  //   margin-left: 92px;
+
+  //   &__item + &__item {
+  //     margin-left: 50px;
+  //   }
+
+  //   &__link {
+  //     position: relative;
+  //     display: block;
+  //     padding-top: 32px;
+  //     padding-bottom: 32px;
+  //     color: $title-and-text-color;
+  //     @include font (14px, 500, 17px);
+  //     letter-spacing: 0.02em;
+  //     text-decoration: none;
+  //     transition: color 500ms $timing-function;
+
+  // &:hover,
+  // &:focus {
+  //   color: $button-color;
+  //   cursor: pointer;
+  //    }
+
+  // &::after {
+  //     content: '';
+  //     display: block;
+  //     position: absolute;
+  //     left: 0;
+  //     bottom: 0;
+  //     width: 100%;
+  //     height: 4px;
+  //     border-radius: 2px;
+  //     background-color: $button-color;
+  //     opacity: 0;
+  //     transform: scaleX(0);
+  //     transition: all 250ms $timing-function;
+  //   }
+
+  // &:hover::after,
+  // &:focus::after {
+  //   opacity: 1;
+  //   transform: scaleX(1);
+  //     }
+  //   }
+  // }
+
+  // .is-current {
+  //   color: $button-color;
+  //   opacity: 1;
+
+  //   &::after {
+  //     color: $button-color;
+  //     opacity: 1;
+  //     transform: scaleX(1);
+  //   }
+  // }
 
   /*---------- CONTACTS ----------*/
   
-  .contacts {
-    // display: flex;
-    // align-items: center;
-    margin-left: auto;
+  // .contacts {
+  //   // display: flex;
+  //   // align-items: center;
+  //   margin-left: auto;
 
-    &__item + &__item {
-      margin-left: 30px;
-    }
+    // &__item + &__item {
+    //   margin-left: 30px;
+    // }
 
-    &__link {
-      display: inline-flex;
-      flex-direction: row-reverse;
-      padding-top: 32px;
-      padding-bottom: 32px;
-      color: $primary-text-color;
-      @include font (14px, 500, 17px);
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      transition: color 250ms linear;
+    // &__link {
+    //   display: inline-flex;
+    //   flex-direction: row-reverse;
+    //   padding-top: 32px;
+    //   padding-bottom: 32px;
+    //   color: $primary-text-color;
+    //   @include font (14px, 500, 17px);
+    //   letter-spacing: 0.02em;
+    //   text-decoration: none;
+    //   transition: color 250ms linear;
 
-    &:hover,
-    &:focus {
-    color: $button-color;
-     }
-    }
-  }
+  //   &:hover,
+  //   &:focus {
+  //   color: $button-color;
+  //    }
+  //   }
+  // }
   
-  .header__icon {
-    margin-right: 10px;
-    fill: $primary-text-color;
+  // .header__icon {
+  //   margin-right: 10px;
+  //   fill: $primary-text-color;
 
-  .contacts__link:hover &,
-  .contacts__link:focus & {
-    fill: $button-color;
-    transition: fill 250ms linear;
-   }
-  }
+  // .contacts__link:hover &,
+  // .contacts__link:focus & {
+  //   fill: $button-color;
+  //   transition: fill 250ms linear;
+  //  }
+  // }
   
   
   
