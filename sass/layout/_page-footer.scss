@@ -9,12 +9,22 @@
     align-items: baseline;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media screen and (max-width: 480px) {
+      text-align: center;
+    }
+    
   }
   
   /*---------- ADRESS ----------*/
   
   .adress {
-    margin-right: 70px;
+    // margin-right: 70px;
+    margin-right: auto;
+
+    .logo {
+      margin-bottom: 20px;
+    }
   }
   
   .adress-list {
@@ -22,6 +32,10 @@
     flex-direction: column;
     @include font (14px, 400, 24px);
     letter-spacing: 0.03em;
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 60px;
+    }
 
     &__link {
       color: rgba(255, 255, 255, 0.6);
@@ -43,6 +57,10 @@
 
   .footer-social {
 
+    @media screen and (max-width: 480px) {
+      margin-bottom: 60px;
+    }
+
     &__description {
       margin-bottom: 20px;
       font-family: $main-font;
@@ -54,6 +72,10 @@
 
     &__list {
       display: flex;
+   
+      @media screen and (max-width: 480px) {
+        justify-content: center;
+      }
     }
     &__item + &__item {
       margin-left: 10px;
@@ -87,9 +109,9 @@
     // height: 86px;
     margin-left: auto;
 
-    &__position {
-      // display: flex;
-    }
+    // &__position {
+    //   // display: flex;
+    // }
 
     &__input {
     width: 358px;
@@ -100,7 +122,11 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: $background;
-    margin-right: 12px;
+    // margin-right: 12px;
+     
+    @media screen and (max-width: 480px) {
+      margin-bottom: 20px;
+    }
 
     &:focus {
       outline: none;

@@ -1,6 +1,7 @@
 /*============ HEADER ==============*/
 
 .page-header {
+  position: relative;
     border-bottom: 1px solid #ececec;
   }
 
@@ -8,11 +9,27 @@
   
   /*-----NEW-HEADER-----*/
   .main-nav {
-    position: relative;
+    // position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 80px;
+
+    @media screen and (min-width: 768px) {
+    //  justify-content: start;
+    }
+  }
+
+  .logo {
+    @media screen and (max-width: 767px) {
+      @include font (24px, 400, 28px);
+      margin-bottom: 0;
+    }
+
+      @media screen and (min-width: 768px) {
+        @include font (24px, 700, 28px);
+        margin-bottom: 0;
+      }
   }
 
   .menu-button {
@@ -33,80 +50,181 @@
     &.is-open .icon-menu {
       display: none;
     }
-  }
 
-   .site-nav {
-     position: absolute;
-     width: 100%;
-     height: 393px;
-     top: 100%;
-     left: 0;
-    //  padding-top: 60px;
-    text-align: center;
-    background-color: white;
-
-    &__item {
-      margin-bottom: 52px;
-
-      &:last-child {
-        margin-bottom: 60px;
-      }
+    @media screen and(min-width: 768px) {
+      display: none;
     }
   }
 
-    .site-nav__link {
-      // position: relative;
-      display: block;
-      // padding-top: 32px;
-      // padding-bottom: 32px;
+  .navigation {
+
+    // &.is-open{
+    //   display: block;
+    // }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+      position: absolute;
+      text-align: center;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 393px;
+      background-color: white;
+    }
+
+    @media screen and (min-width: 768px) {
+      // display: flex;
+      display: contents;
+      align-items: center;
+    }
+} 
+
+ .site-nav {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      // margin-left: 75px;
+  
+      .site-nav__item + .site-nav__item {
+        margin-left: 50px;
+      }
+    }
+}
+
+   .site-nav__item {
+    margin-bottom: 52px;
+
+    &:last-child {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &{
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+    .site-nav__link{
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
       color: $title-and-text-color;
+      @include font (14px, 500, 17px);
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: color 250ms $timing-function;
+
+      @media screen and (min-width: 768px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      @include font (14px, 500, 16px);  
+      }
+
+      @media screen and (max-width: 767px) {
+        @include font (18px, 500, 21px);
+      }
+
+     &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $button-color;
+        opacity: 0;
+        transform: scaleX(0);
+        transition: all 250ms $timing-function;
+       }
+
+       &:hover,
+       &:focus {
+        color: $button-color;
+        cursor: pointer;
+      }
+
+      &:hover::after,
+      &:focus::after {
+      opacity: 1;
+      transform: scaleX(1);
+       }
+      }
+
+     .is-current {
+     color: $button-color;
+     opacity: 1;
+
+     &::after {
+      color: $button-color;
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  } 
+   /*---------- CONTACTS ----------*/
+  
+  .contacts {
+    display: block;
+    align-items: center;
+
+    &__item + &__item {
+      margin-left: 30px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+   @media screen and (min-width: 768px) {
+    // margin-left: 75px;
+
+    .contacts__item {
+      margin-left: 0;
+    }
+
+    .contacts__item:not(:last-child) {
+      margin-bottom: 10px;
+     }
+    }
+
+
+    &__link {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      color: $primary-text-color;
       @include font (14px, 500, 17px);
       letter-spacing: 0.02em;
       text-decoration: none;
-      transition: color 500ms $timing-function;
+      transition: color 250ms linear;
 
-  &:hover,
-  &:focus {
+    &:hover,
+    &:focus {
     color: $button-color;
-    cursor: pointer;
      }
 
-     &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      background-color: $button-color;
-      opacity: 0;
-      transform: scaleX(0);
-      transition: all 250ms $timing-function;
-     }
+    //  @media screen and (min-width: 768px) {
+    //    align-items: center;
+    //   justify-content: center;
+    // }
     }
-  
-  .site-nav.list {
-    background-color: #fff;
+
+  .header__icon {
+    margin-right: 10px;
+    fill: $primary-text-color;
+
+  .contacts__link:hover &,
+  .contacts__link:focus & {
+    fill: $button-color;
+    transition: fill 250ms linear;
+   }
   }
-
-  &:hover::after,
-  &:focus::after {
-    opacity: 1;
-    transform: scaleX(1);
-      }
-
-  // .is-current {
-  //   color: $button-color;
-  //   opacity: 1;
-
-  //   &::after {
-  //     color: $button-color;
-  //     opacity: 1;
-  //     transform: scaleX(1);
-  //   }
-  // }
+  }
 
 
  /*-----OLD-HEADER-----*/

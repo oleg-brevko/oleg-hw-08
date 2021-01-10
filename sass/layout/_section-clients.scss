@@ -1,11 +1,36 @@
 /*============ SECTION-CLIENTS ==============*/
 
+.clients {
+  @media screen and (max-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  } 
+}
+
 .clients-list {
-    // display: flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    margin: -15px;
+  
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
   }
+}
+
+.clients__item {
+  margin: 15px;
+  // &:last-child {
+  //   margin-right: 0;
+  // }
+
+  // @media screen and (max-width: 480px) {
+  //   margin-right: 0;
+  // }
+}
   
   .clients__link {
+    // flex-basis: calc((100%-30)/2);
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -21,13 +46,9 @@
       border-color: $button-color;
       color: $button-color;
     }
-  }
-  
-  .clients__item {
-    margin-right: 30px;
 
-    &:last-child {
-      margin-right: 0;
+    @media screen and (max-width: 480px) {
+      width: 208px;
     }
   }
   

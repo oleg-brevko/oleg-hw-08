@@ -3,23 +3,29 @@
 .team {
     background-color: $radio-button-color;
 
-    &__list {
-      // display: flex;
-      // flex-wrap: wrap;
-    }
+    // &__list {
+    //   // display: flex;
+    //   // flex-wrap: wrap;
+    // }
 
     &__item {
       text-align: center;
-      width: 270px;
+      // width: 270px;
       background-color: $primary-white-color;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
       border-radius: 0px 0px 4px 4px;
     }
 
-    &__item + &__item {
-      margin-left: 30px;
+    @media screen and (max-width: 480px) {
+      .team__item:not(:last-child) {
+    margin-bottom: 30px;
+      }
     }
+
+    // &__item + &__item {
+    //   margin-left: 30px;
+    // }
 
     &__title {
       margin-bottom: 10px;
@@ -34,6 +40,11 @@
       color: $primary-text-color;
       @include font (16px, 400, 19px);
       letter-spacing: 0.03em;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
   }
 

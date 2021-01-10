@@ -18,6 +18,14 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
+
+    @media screen and (max-width: 480px) {
+     padding-bottom: 118px;
+     padding-top: 118px;
+      &__title {
+        @include font (26px, 900, 42px);
+      }
+    }
   }
 
 /*---------- OVERLAY ----------*/

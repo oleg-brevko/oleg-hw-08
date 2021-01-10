@@ -1,5 +1,12 @@
 /*============ SECTION-FEATUTES ==============*/
 
+.features {
+  @media screen and (max-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .feature__list {
     // display: flex;
     margin-left: auto;
@@ -14,6 +21,10 @@
     @include font (14px, 700, 16px);
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (max-width: 480px) {
+      text-align: center;
+    }
   }
   
  .feature__item {
@@ -21,6 +32,10 @@
 
     &:nth-child(4n) {
       margin-right: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+      margin-right: 0; 
     }
   }
 
@@ -31,5 +46,10 @@
     height: 120px;
     width: 270px;
     background-color: $radio-button-color;
+
+    @media screen and (max-width: 480px) {
+      height: 120px;
+      width: 450px;
+    }
   }
   
