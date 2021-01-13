@@ -7,25 +7,31 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: all 250ms linear;
+  overflow-y: scroll;
   
   &.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  
-}
+ }
+
+ @media screen and (max-width: 480px) {
+  padding: 93px 15px;
+ }
+
+//  @media screen and (min-width: 481px) {
+//    padding-top: 130px;
+//  }
 }
 
 /*---------MODAL----------*/
 
 .modal {
-  position: absolute;
   padding: 40px;
-  width: 528px;
-  min-height: 581px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  margin-left: auto;
+  margin-right: auto;
+  // width: 528px;
+  // min-height: 581px;
   background-color: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -34,6 +40,14 @@
   
   .backdrop.is-hidden & {
   transform: translate(-50%, -50%) scale(0);
+  }
+
+  
+  @media screen and (max-width: 480px) {
+    width: 450px;
+    position: relative;
+    @include font (12px, 400, 14px);
+    letter-spacing: 0.03em;
   }
 }
 

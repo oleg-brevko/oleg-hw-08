@@ -56,24 +56,6 @@ img {
   padding-right: 15px;
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
-}
-
 /*============ SECTION ==============*/
 .section {
   padding-top: 94px;
@@ -186,6 +168,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: all 250ms linear;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -194,15 +177,17 @@ img {
   pointer-events: none;
 }
 
+@media screen and (max-width: 480px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
+}
+
 /*---------MODAL----------*/
 .modal {
-  position: absolute;
   padding: 40px;
-  width: 528px;
-  min-height: 581px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  margin-left: auto;
+  margin-right: auto;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -211,6 +196,17 @@ img {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
+}
+
+@media screen and (max-width: 480px) {
+  .modal {
+    width: 450px;
+    position: relative;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.167;
+    letter-spacing: 0.03em;
+  }
 }
 
 .close__button {
@@ -632,8 +628,9 @@ img {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .hero {
+    display: flex;
     padding-bottom: 118px;
     padding-top: 118px;
   }
