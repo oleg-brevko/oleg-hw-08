@@ -2,7 +2,7 @@
 
 .social-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
     &__link {
       display: flex;
@@ -24,10 +24,6 @@
 
     &__icon {
       fill: currentColor;
-    }
-
-    @media screen and (max-width: 480px) {
-    justify-content: center;
     }
   }
   

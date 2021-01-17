@@ -5,13 +5,18 @@
   }
   
   .footer-container {
-    // display: flex;
     align-items: baseline;
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 767px) {
       text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
     }
     
   }
@@ -20,7 +25,11 @@
   
   .adress {
     // margin-right: 70px;
-    margin-right: auto;
+    // margin-right: auto;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-left: 60px;
+    }
 
     .logo {
       margin-bottom: 20px;
@@ -33,7 +42,7 @@
     @include font (14px, 400, 24px);
     letter-spacing: 0.03em;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 60px;
     }
 
@@ -57,8 +66,13 @@
 
   .footer-social {
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      // margin-right: 60px;
     }
 
     &__description {
@@ -68,12 +82,17 @@
       letter-spacing: 0.03em;
       text-transform: uppercase;
       color: $primary-white-color;
+
+      
+      @media screen and (max-width: 1199px) {
+      text-align: center;
+      }
     }
 
     &__list {
       display: flex;
    
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 767px) {
         justify-content: center;
       }
     }
@@ -105,13 +124,24 @@
   /*---------FOOTER-FORM----------*/
   
   .footer-form {
-    // width: 570px;
-    // height: 86px;
-    margin-left: auto;
 
-    // &__position {
-    //   // display: flex;
-    // }
+    @media screen and (min-width: 1200px) {
+    width: 570px;
+    height: 86px;
+    margin-left: auto;
+    }
+
+    &__position {
+      @media screen and (min-width: 1200px) {
+        display: flex; 
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 60px;
+      margin-right: auto;
+      margin-left: auto;
+    }
 
     &__input {
     width: 358px;
@@ -122,10 +152,18 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: $background;
-    // margin-right: 12px;
+   
      
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 20px;
+      }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 12px;
     }
 
     &:focus {

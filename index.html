@@ -26,22 +26,24 @@
         <!--Menu nav-->
 
           <button type="button"
-           class="menu-button is-open"
+           class="menu-button "
            aria-expanded="false"
+           data-menu-button
            >
             <svg   
             width="20"
             height="20"
             aria-label="Menu button switch"
-            aria-controls="site-nav-id"
+            aria-controls="navigation"
             >
               <use href="./images/sprite.svg#icon-close" class="icon-cross"></use>
               <use href="./images/sprite.svg#icon-menu" class="icon-menu"></use>
             </svg>
           </button>
 
-    <nav class="navigation"> 
-          <ul class="site-nav list" id="site-nav-id">
+    <nav class="navigation"
+    data-menu> 
+          <ul class="site-nav list" id="navigation">
             <li class="site-nav__item">
               <a href="index.html" class="site-nav__link is-current">Студия</a>
             </li>
@@ -588,5 +590,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

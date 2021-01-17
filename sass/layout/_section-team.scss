@@ -3,29 +3,42 @@
 .team {
     background-color: $radio-button-color;
 
-    // &__list {
-    //   // display: flex;
-    //   // flex-wrap: wrap;
-    // }
+    @media screen and (min-width: 768px) {
+       &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+     }
+    }
 
+    @media screen and (max-width: 767px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+   
     &__item {
       text-align: center;
-      // width: 270px;
       background-color: $primary-white-color;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
       border-radius: 0px 0px 4px 4px;
-    }
-
-    @media screen and (max-width: 480px) {
-      .team__item:not(:last-child) {
+    
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
     margin-bottom: 30px;
       }
     }
 
-    // &__item + &__item {
-    //   margin-left: 30px;
-    // }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin: 15px;
+    flex-basis: calc((100% - 4 * 15px) / 2)
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin: 15px;
+       width: 270px;
+      }
+  }
 
     &__title {
       margin-bottom: 10px;
@@ -41,14 +54,9 @@
       @include font (16px, 400, 19px);
       letter-spacing: 0.03em;
     }
+   }
 
-    @media screen and (max-width: 480px) {
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-  }
-
-  .team-list-details {
+ .team-list-details {
       padding: 30px;
     }
   

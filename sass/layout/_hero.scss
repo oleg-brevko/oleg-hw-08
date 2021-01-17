@@ -1,31 +1,40 @@
 /*============ HERO ==============*/
 
 .hero {
-    
-    // flex-wrap: wrap;
-    text-align: center;
-    // justify-content: center;
-    // align-items: center;
-    // padding-bottom: 200px;
-    // padding-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
     background-color: $background;
 
     &__title {
       margin-top: 0;
       margin-bottom: 30px;
       color: $primary-white-color;
-      @include font (44px, 900, 60px);
-      letter-spacing: 0.06em;
       text-transform: uppercase;
-    }
-
-    @media screen and (max-width: 768px) {
-      display: flex;
-     padding-bottom: 118px;
-     padding-top: 118px;
-      &__title {
+      letter-spacing: 0.06em;
+  
+    @media screen and (max-width: 1199px) {
         @include font (26px, 900, 42px);
       }
+
+      @media screen and (min-width: 1200px) {
+        @include font (44px, 900, 60px);
+      }
+     }
+
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 118px;
+      padding-top: 118px;
+      
+    }
+
+    @media screen and (min-width: 1200px) {
+    padding-bottom: 200px;
+    padding-top: 200px;
     }
   }
 
