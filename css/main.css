@@ -49,6 +49,7 @@ img {
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -180,6 +181,9 @@ img {
 
 .backdrop {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 0;
   top: 0;
   /* z-index: 100; */
@@ -194,12 +198,6 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-@media screen and (max-width: 1199px) {
-  .backdrop {
-    padding: 93px 15px;
-  }
 }
 
 /*---------MODAL----------*/
@@ -233,8 +231,6 @@ img {
 @media screen and (min-width: 1200px) {
   .modal {
     position: absolute;
-    left: 30%;
-    top: 30%;
   }
 }
 
@@ -473,6 +469,7 @@ img {
 
 .navigation.is-open {
   display: block;
+  padding-top: 60px;
 }
 
 @media screen and (max-width: 767px) {
@@ -511,9 +508,6 @@ img {
 @media screen and (max-width: 767px) {
   .site-nav__item {
     margin-bottom: 52px;
-  }
-  .site-nav__item:last-child {
-    margin-bottom: 60px;
   }
 }
 
@@ -716,12 +710,18 @@ img {
 
 /*---------- OVERLAY ----------*/
 .overlay {
-  margin-left: auto;
-  margin-right: auto;
-  outline: 1px solid #212121;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/Hero-mobile-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-size: 480px 400px;
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .overlay {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/Hero-mobile-img@2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 /*============ SECTION-FEATUTES ==============*/
@@ -919,29 +919,17 @@ img {
 }
 
 /*============ SECTION-CLIENTS ==============*/
-@media screen and (max-width: 480px) {
-  .clients {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-
 .clients-list {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin: -15px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 1200px) {
   .clients-list {
-    margin: -15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .clients-list {
-    margin: -15px;
+    flex-wrap: nowrap;
   }
 }
 

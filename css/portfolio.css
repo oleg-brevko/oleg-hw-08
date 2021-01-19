@@ -49,6 +49,7 @@ img {
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -281,6 +282,7 @@ img {
 
 .navigation.is-open {
   display: block;
+  padding-top: 60px;
 }
 
 @media screen and (max-width: 767px) {
@@ -319,9 +321,6 @@ img {
 @media screen and (max-width: 767px) {
   .site-nav__item {
     margin-bottom: 52px;
-  }
-  .site-nav__item:last-child {
-    margin-bottom: 60px;
   }
 }
 

@@ -1,5 +1,8 @@
 .backdrop {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 0;
   top: 0;
   /* z-index: 100; */
@@ -16,7 +19,7 @@
  }
 
  @media screen and (max-width: 1199px) {
-  padding: 93px 15px;
+  // padding: 93px 15px;
  }
 
 //  @media screen and (min-width: 481px) {
@@ -52,8 +55,6 @@
 
   @media screen and (min-width: 1200px) {
     position: absolute;
-    left: 30%;
-    top: 30%;
   }
 }
 

@@ -55,6 +55,7 @@
 
     &.is-open{
       display: block;
+      padding-top: 60px;
     }
 
     @media screen and (max-width: 767px) {
@@ -69,13 +70,9 @@
     }
 
     @media screen and (min-width: 768px) {
-      // display: flex;
       display: contents;
       align-items: center;
     }
-    
-    @media screen and (min-width: 1200px) {
-    } 
 } 
 
  .site-nav {
@@ -92,9 +89,9 @@
    @media screen and (max-width: 767px) {
     margin-bottom: 52px;
 
-    &:last-child {
-    margin-bottom: 60px;
-   }
+  //   &:last-child {
+  //   margin-bottom: 60px;
+  //  }
   }
 
   @media screen and (min-width: 768px) {

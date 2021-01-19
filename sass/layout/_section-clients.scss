@@ -1,24 +1,14 @@
 /*============ SECTION-CLIENTS ==============*/
 
-.clients {
-  @media screen and (max-width: 480px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  } 
-}
-
 .clients-list {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin: -15px;
   
-  @media screen and (max-width: 480px) {
-    margin: -15px;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin: -15px;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap
   }
 }
 
