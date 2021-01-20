@@ -132,10 +132,17 @@
     }
 
     &__position {
-      @media screen and (min-width: 1200px) {
-        display: flex; 
-      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: flex;
+      flex-wrap: wrap;
     }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: nowrap;
+      }
+  }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-top: 60px;
@@ -144,7 +151,8 @@
     }
 
     &__input {
-    width: 358px;
+      width: calc(100%);
+    // width: 358px;
     height: 50px;
     padding: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -152,13 +160,8 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: $background;
-   
-     
-    @media screen and (max-width: 767px) {
-      margin-bottom: 20px;
-      }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (max-width: 1199px) {
       margin-bottom: 20px;
     }
 
