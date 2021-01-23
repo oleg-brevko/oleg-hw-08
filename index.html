@@ -156,43 +156,64 @@
       <!--Occupation-->
 
       <section class="section occupation">
+
         <div class="container">
           <h3 class="section__title">Чем мы занимаемся</h3>
+
           <ul class="occupation__list list">
+
             <li class="occupation__item">
+
               <img
-                src="./images/printing.jpg"
-                alt="printing"
-                width="370"
-                height="294"
-              />
+              srcset="
+              ./images/occupation/Laptop.jpg 1x,
+              ./images/occupation/Laptop.jpg 2x,
+              ./images/occupation/Laptop.jpg 3x"
+                src="./images/occupation/Laptop.jpg"
+                alt="Laptop"
+                width="370px"/>
+
               <div class="occupation-background">
                 <p class="occupation-background__text">Десктопные приложения</p>
               </div>
+
             </li>
+
             <li class="occupation__item">
+
               <img
-                src="./images/phone.jpg"
-                alt="phone"
-                width="370"
-                height="294"
-              />
+              srcset="
+              ./images/occupation/Phone.jpg 1x,
+              ./images/occupation/Phone.jpg 2x,
+              ./images/occupation/Phone.jpg 3x"
+                src="./images/occupation/Phone.jpg"
+                alt="Phone"
+                width="370px"/>
+
               <div class="occupation-background">
                 <p class="occupation-background__text">Мобильные приложения</p>
               </div>
+
             </li>
+
             <li class="occupation__item">
+
               <img
-                src="./images/tablet.jpg"
-                alt="tablet"
-                width="370"
-                height="294"
-              />
+                srcset="
+                ./images/occupation/Tablet.jpg 1x,
+                ./images/occupation/Tablet.jpg 2x,
+                ./images/occupation/Tablet.jpg 3x"
+                src="./images/occupation/Tablet.jpg"
+                alt="Tablet"
+                width="370px"/>
+
               <div class="occupation-background">
                 <p class="occupation-background__text">Дизайнерские решения</p>
               </div>
+
             </li>
           </ul>
+
         </div>
       </section>
 
@@ -206,14 +227,20 @@
 
              <picture class="team-picture">
 
-              <source srcset="./images/team/Igor-mobile.jpg 1x, ./images/team/Igor-mobile@2x.jpg 2x"
-              media="(max-width: 767px)">
+              <source srcset="./images/team/Igor-desktop.webp 1x, ./images/team/Igor-desktop@2x.webp 2x"
+              media="(min-width: 1200px)" type="image/webp">
+
+              <source srcset="./images/team/Igor-desktop.jpg 1x, ./images/team/Igor-desktop@2x.jpg 2x"
+              media="(min-width: 1200px)">
+
+              <source srcset="./images/team/Igor-tablet.webp 1x, ./images/team/Igor-tablet@2x.webp 2x"
+              media="(min-width: 768px)" type="image/webp">
 
                <source srcset="./images/team/Igor-tablet.jpg 1x, ./images/team/Igor-tablet@2x.jpg 2x"
-               media="(max-width: 1199px)">
+               media="(min-width: 768px)">
 
               <img
-              src="./images/team/Igor-desktop.jpg"
+              src="./images/team/Igor-mobile.jpg"
               alt="Igor Demyanenko"/>
               
              </picture>
@@ -264,14 +291,20 @@
 
               <picture class="team-picture">
 
-                <source srcset="./images/team/Olga-mobile.jpg 1x, ./images/team/Olga-mobile@2x.jpg 2x"
-                media="(max-width: 767px)">
+                <source srcset="./images/team/Olga-desktop.webp 1x, ./images/team/Olga-desktop@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+
+                <source srcset="./images/team/Olga-desktop.jpg 1x, ./images/team/Olga-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+                <source srcset="./images/team/Olga-tablet.webp 1x, ./images/team/Olga-tablet@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
 
                   <source srcset="./images/team/Olga-tablet.jpg 1x, ./images/team/Olga-tablet@2x.jpg 2x"
-                  media="(max-width: 1199px)">
+                  media="(min-width: 768px)">
 
                 <img
-                src="./images/team/Olga-desktop.jpg"
+                src="./images/team/Olga-mobile.jpg"
                 alt="Olga Repina"/>
 
               </picture>
@@ -322,14 +355,20 @@
 
               <picture class="team-picture">
 
-                <source srcset="./images/team/Nikolai-mobile.jpg 1x, ./images/team/Nikolai-mobile@2x.jpg 2x"
-                media="(max-width: 767px)">
+                <source srcset="./images/team/Nikolai-desktop.webp 1x, ./images/team/Nikolai-desktop@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+
+                <source srcset="./images/team/Nikolai-desktop.jpg 1x, ./images/team/Nikolai-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+                <source srcset="./images/team/Nikolai-tablet.webp 1x, ./images/team/Nikolai-tablet@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
 
                 <source srcset="./images/team/Nikolai-tablet.jpg 1x, ./images/team/Nikolai-tablet@2x.jpg 2x"
-                media="(max-width: 1199px)">
+                media="(min-width: 768px)">
 
                 <img
-                src="./images/team/Nikolai-desktop.jpg"
+                src="./images/team/Nikolai-mobile.jpg"
                 alt="Nikolai Tarasov"/>
 
               </picture>
@@ -380,14 +419,20 @@
 
               <picture class="team-picture">
 
-                <source srcset="./images/team/Mikhail-mobile.jpg 1x, ./images/team/Mikhail-mobile@2x.jpg 2x"
-                media="(max-width: 767px)">
+                <source srcset="./images/team/Mikhail-desktop.webp 1x, ./images/team/Mikhail-desktop@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+
+                <source srcset="./images/team/Mikhail-desktop.jpg 1x, ./images/team/Mikhail-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+                <source srcset="./images/team/Mikhail-tablet.webp 1x, ./images/team/Mikhail-tablet@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
 
                 <source srcset="./images/team/Mikhail-tablet.jpg 1x, ./images/team/Mikhail-tablet@2x.jpg 2x"
-                media="(max-width: 1199px)">
+                media="(min-width: 768px)">
 
                 <img
-                src="./images/team/Mikhail-desktop.jpg"
+                src="./images/team/Mikhail-mobile.jpg"
                 alt="Mikhail Ermakov"/>
 
               </picture>
